@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sololearners</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+      @layer components {
+        .spring-mode {
+              @apply  bg-[linear-gradient(rgba(0,15,0,0.4),rgba(0,90,0,0.4)),url('https://clipground.com/images/green-leaves-background-clipart-15.jpg')]
+                      bg-cover bg-center min-h-screen
+                      rounded-lg shadow-lg;
+        }
+      }
+
+      @theme {
+        --color-clifford: #da373d;
+      }
+
+    </style>
+</head>
+<body class="season-bg spring-mode text-white bg-white dark:bg-black dark:text-white">
+  <main class="season-bg spring-mode mx-auto my-0 max-w-screen-xl">
+        <section class="season-bg spring-mode  mx-auto">
+      <button>Hello</button>
+    </section>
+  </main>
+</body>
+</html>
