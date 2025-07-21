@@ -110,7 +110,7 @@ guns.forEach(el=>{
           const x = Math.cos(angle) * radius;
           const y = Math.sin(angle) * radius;
 
-          // 🎯 Position from center of the gun
+          //🥴 🎯 Position from center of the gun
       const rect = el.getBoundingClientRect();
 const gunCenterX = rect.left + rect.width / 2 + window.scrollX;
 const gunCenterY = rect.top + rect.height / 2 + window.scrollY;
