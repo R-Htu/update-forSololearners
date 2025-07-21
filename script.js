@@ -111,17 +111,23 @@ guns.forEach(el=>{
           const y = Math.sin(angle) * radius;
 
           //🥴 🎯 Position from center of the gun
-      const rect = el.getBoundingClientRect();
-const gunCenterX = rect.left + rect.width / 2 + window.scrollX;
-const gunCenterY = rect.top + rect.height / 2 + window.scrollY;
-     puff.style.left = `${gunCenterX}px`;
+          const rect = el.getBoundingClientRect();
+          const gunCenterX = rect.left + rect.width / 2 + window.scrollX;
+          const gunCenterY = rect.top + rect.height / 2 + window.scrollY;
+
+          puff.style.position = 'absolute';
+          puff.style.left = `${gunCenterX}px`;
           puff.style.top = `${gunCenterY}px`;
+          puff.style.zIndex = 999;
+          puff.style.pointerEvents = 'none';
+
           puff.style.setProperty('--move-x', `${x}px`);
           puff.style.setProperty('--move-y', `${y}px`);
          
           document.body.appendChild(puff);
 
           setTimeout(() => puff.remove(), 800);
+          setTimeout(()=>el.style.color ="gray", 8000);
 
 
     }
