@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Sololearners</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @tailwind base;
@@ -15,6 +16,11 @@
                       bg-cover bg-center min-h-screen
                       rounded-lg shadow-lg;
         }
+
+        .autumn-mode {
+              @apply bg-[linear-gradient(rgba(100,77,0,0.4),rgba(110,15,5,0.4),rgba(65,80,0,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]
+                     bg-cover bg-center min-h-screen rounded-lg shadow-lg;
+  }
       }
 
       @theme {
@@ -25,9 +31,58 @@
 </head>
 <body class="season-bg spring-mode text-white bg-white dark:bg-black dark:text-white">
   <main class="season-bg spring-mode mx-auto my-0 max-w-screen-xl">
-        <section class="season-bg spring-mode  mx-auto">
-      <button>Hello</button>
-    </section>
+    
+    <section class="season-bg spring-mode w-[97%] lg:w-[60%] md:w-[80%] mx-auto">
+        <!--Gun Collection -->
+        <div class=" season-bg spring-mode gun-collection text-gray-400 relative min-h-screen">
+           <!-- 🍀Season mode button --> 
+        <button style="padding: 10px;" id="leafBtn" class="text-2xl">
+          <span id="leafIcon">🍀</span>
+        </button>
+        
+      <!-- Dark mode button --> 
+        <button style="padding: 10px;" onclick="toggleTheme()" id="iconBtn" class="text-2xl ">
+            <i class="fa-solid fa-moon text-gray-500"></i>
+        </button>
+
+        <!-- Button Door for Gun collection--> 
+        <button style="padding: 10px;" id="btnDoor" class="text-2xl">
+          <i class="fa-solid fa-house text-gray-500"></i>
+        </button>
+          <!-- First Gun -->
+          <div class="gun-item" id="firstGun">
+            <div class="gun absolute top-[15%] left-[50%] translate-x-[-50%]" id="emojiFirstGun">一═デ︻☜(ಥ﹏ಥ)</div>
+          </div>
+
+          <!-- Second Gun -->
+          <div class="gun-item" id="secondGun">
+            <div class="gun absolute top-[35%] right-[5%]" id="emojiSecondGun">	─╤╦︻☜( ͡° ͜ʖ͡°)</div>
+          </div>
+
+          <!-- Third Gun -->
+          <div class="gun-item" id="thirdGun">
+            <div class="gun absolute top-[45%] left-[5%] " id="emojiTthirdGun">	(ง'̀-'́)☞ง︻デ═一</div>
+          </div>
+
+          <!-- Fouth Gun -->
+          <div class="gun-item" id="fourthGun">
+            <div class="gun  absolute top-[55%] right-[5%]" id="emojiFourthGun">─╤╦︻ﾉ👈(༼ ಠ益ಠ ༽ヽ</div>
+          </div>
+        
+          <!-- Fifth Gun -->
+          <div class="gun-item" id="fifthGun">
+            <div class="gun absolute top-[65%] left-[10%] " id="emojiFifthGun">(°ロ°)"👉︻╦̵̵͇̿̿̿̿╤──</div>
+          </div>
+
+          <!-- Sixth Gun -->
+          <div class="gun-item" id="sixthGun">
+            <div class="gun absolute top-[85%] left-[50%] translate-x-[-50%]" id="emojiSixthGun">(ಠ_ಠ)'☞︻╦̵̵͇̿̿̿̿╤──</div>
+          </div>
+          
+        </div>
+
+      </section>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
